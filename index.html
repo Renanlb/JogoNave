@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="../Jogo+Pontos/estilos/style.css">
+    <title>Jogo Nave Espacial</title>
+  </head>
+  <body>
+    <div id="cenario">
+      <div id="menu">
+        <div id="vida">Vida: 100</div>
+        <div id="pontos">Pontos: 0</div>
+      </div>
+
+        <!-- Camada de desfoque -->
+        <div id="blur-layer"></div>
+        <!-- Vídeo tutorial -->
+        <div id="video-tutorial" class="video-container">
+            <video id="tutorial" width="1280" height="800" controls>
+                <source src="../Jogo+Pontos/assets/tutorial.mov" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+              <button id="fecharTutorial" class="fechar-tutorial">Fechar</button>
+        </div>
+        
+      <div id="equipe"></div>
+      <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="menu">
+            <a href="#" onclick="iniciarJogo()"><img src="../Jogo+Pontos/assets/Iniciar.png" alt=""></a>
+            <a href="#" onclick="pausarJogo()"><img src="../Jogo+Pontos/assets/Pausar.png" alt=""></a>
+            <a href="#" onclick="reiniciarJogo()"><img src="../Jogo+Pontos/assets/Reiniciar.png" alt=""></a>
+            <a href="#" onclick="iniciarTutorial()"><img src="../Jogo+Pontos/assets/video-tutorial.png" alt=""></a>
+        </div>
+    </nav>
+     
+    </div>
+    <script src="../Jogo+Pontos/javascripts/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+ 
+#cenario {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(../assets/imagemdefundo.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* Camada de desfoque */
+#blur-layer {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Abaixo do vídeo */
+    backdrop-filter: blur(5px);
+    transition: backdrop-filter 0.3s ease-in-out;
+}
+
+.video-container {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+    background-color: rgba(0, 0, 0, 20); /* Fundo semi-transparente para destaque */
+    padding: 20px;
+    border-radius: 10px;
+}
+.fechar-tutorial {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#menu {
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#equipe {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url(../assets/Equipe.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+}
+
+#iniciar {
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@keyframes animarCenario {
+    from {
+        background-position-y: 100%;
+    }
+    to {
+        background-position-y: 0%;  
+    }
+}
+.navbar {
+    display: block;
+ 
+}
+
+.navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar .menu {
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 70px;
+    right:25px;
+}
+
+.navbar .hamburger {
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 100px;
+    text-align: center;
+}
+
+@media (max-width: 20px) {
+    .navbar a {
+        display: none;
+    }
+
+    .navbar .menu {
+        display: block;
+    }
+}
